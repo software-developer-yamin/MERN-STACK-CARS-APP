@@ -1,11 +1,22 @@
+import styled from "styled-components";
+import tw from "twin.macro";
 import "./App.css";
 import HomePage from "./app/components/containers/HomePage";
 
+const AppContainer = styled.div`
+  ${tw`
+    h-full
+    w-full
+    flex
+    flex-col
+  `};
+`;
+
 function App() {
   return (
-    <div className="App">
-      <HomePage/>
-    </div>
+    <AppContainer>
+      <HomePage />
+    </AppContainer>
   );
 }
 
