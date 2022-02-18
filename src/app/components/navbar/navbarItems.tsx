@@ -1,6 +1,6 @@
 import { slide as Menu } from "react-burger-menu";
 import { useMediaQuery } from "react-responsive";
-import styled from "styled-components";
+import styled, { css } from "styled-components";
 import tw from "twin.macro";
 import { SCREENS } from "../responsive";
 import menuStyles from "./menuStyles";
@@ -11,38 +11,48 @@ const ListContainer = styled.ul`
       list-none
     `};
 `;
-const ListItem = styled.li`
+const ListItem = styled.li<{ menu?: any }>`
   ${tw`
-          text-xs
-          md:text-base
-          text-black
-          font-medium
-          mr-1
-          md:mr-5
-          cursor-pointer
-          transition
-          duration-300
-          ease-in-out
-          hover:text-gray-700
-     `};
+      text-xs
+      md:text-base
+      text-black
+      font-medium
+      mr-1
+      md:mr-5
+      cursor-pointer
+      transition
+      duration-300
+      ease-in-out
+      hover:text-gray-700
+    `};
+  ${({ menu }) =>
+    menu &&
+    css`
+      ${tw`
+    text-white
+    text-xl
+    mb-3
+    focus:text-white
+    `}
+    `};
 `;
 
 function NavbarItems() {
   const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
   if (isMobile) {
     return (
-      <Menu styles={menuStyles} >
+      <Menu right styles={menuStyles}>
         <ListContainer>
-          <ListItem>
+          <ListItem menu>
             <a href="#">Home</a>
           </ListItem>
-          <ListItem>
+          <ListItem menu>
             <a href="#">Cars</a>
           </ListItem>
-          <ListItem>
+          <ListItem menu>
             <a href="#">Services</a>
           </ListItem>
-          <ListItem>
+          <ListItem menu>
             <a href="#">Contact Us</a>
           </ListItem>
         </ListContainer>
