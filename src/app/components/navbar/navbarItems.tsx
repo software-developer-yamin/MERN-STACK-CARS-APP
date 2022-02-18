@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import tw from "twin.macro";
+import { slide as Menu } from "react-burger-menu";
 
 const ListContainer = styled.ul`
   ${tw`
