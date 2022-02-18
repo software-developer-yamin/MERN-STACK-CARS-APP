@@ -3,6 +3,7 @@ import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
 import tw from "twin.macro";
 import { SCREENS } from "../responsive";
+import menuStyles from "./menuStyles";
 
 const ListContainer = styled.ul`
   ${tw`
@@ -30,7 +31,7 @@ function NavbarItems() {
   const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
   if (isMobile) {
     return (
-      <Menu>
+      <Menu styles={menuStyles} >
         <ListContainer>
           <ListItem>
             <a href="#">Home</a>
