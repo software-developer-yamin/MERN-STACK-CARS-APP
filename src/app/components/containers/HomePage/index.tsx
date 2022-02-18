@@ -3,7 +3,12 @@ import tw from "twin.macro";
 
 const PageContainer = styled.div`
   ${tw`
-        flex  
+        flex
+        items-center
+        flex-col
+        h-full
+        w-full
+        overflow-x-hidden 
      `};
 `;
 
