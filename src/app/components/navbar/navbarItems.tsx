@@ -1,12 +1,14 @@
+import { slide as Menu } from "react-burger-menu";
+import { useMediaQuery } from "react-responsive";
 import styled from "styled-components";
 import tw from "twin.macro";
-import { slide as Menu } from "react-burger-menu";
+import { SCREENS } from "../responsive";
 
 const ListContainer = styled.ul`
   ${tw`
-          flex
-          list-none
-     `};
+      flex
+      list-none
+    `};
 `;
 const ListItem = styled.li`
   ${tw`
@@ -25,6 +27,27 @@ const ListItem = styled.li`
 `;
 
 function NavbarItems() {
+  const isMobile = useMediaQuery({ maxWidth: SCREENS.sm });
+  if (isMobile) {
+    return (
+      <Menu>
+        <ListContainer>
+          <ListItem>
+            <a href="#">Home</a>
+          </ListItem>
+          <ListItem>
+            <a href="#">Cars</a>
+          </ListItem>
+          <ListItem>
+            <a href="#">Services</a>
+          </ListItem>
+          <ListItem>
+            <a href="#">Contact Us</a>
+          </ListItem>
+        </ListContainer>
+      </Menu>
+    );
+  }
   return (
     <ListContainer>
       <ListItem>
