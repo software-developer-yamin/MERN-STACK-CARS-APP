@@ -24,10 +24,8 @@ const CardContainer = styled.div`
     bg-white
     py-1
     px-2
-    -mt-16
     md:py-2
     md:px-9
-    md:mt-8
   `};
 `;
 

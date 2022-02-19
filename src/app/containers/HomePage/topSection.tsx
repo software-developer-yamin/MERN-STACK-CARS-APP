@@ -1,9 +1,9 @@
 import styled from "styled-components";
 import tw from "twin.macro";
-import Blob from "../../../../assets/images/blob.svg";
-import MclorenCarImg from "../../../../assets/images/mclaren-orange-big.png";
-import { Button } from "../../button";
-import { SCREENS } from "../../responsive";
+import Blob from "../../../assets/images/blob.svg";
+import MclorenCarImg from "../../../assets/images/mclaren-orange-big.png";
+import { Button } from "../../components/button";
+import { SCREENS } from "../../components/responsive";
 
 const TopSectionContainer = styled.div`
   min-height: 400px;
