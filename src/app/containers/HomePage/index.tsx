@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import tw from "twin.macro";
 import BookCard from "../../components/bookCard";
+import Footer from "../../components/footer";
 import { Marginer } from "../../components/marginer";
 import Navbar from "../../components/navbar";
 import { AboutUs } from "./aboutUs";
@@ -32,6 +33,7 @@ const HomePage = () => {
       <AboutUs />
       <Marginer direction="vertical" margin="8em" />
       <TopCars />
+      <Footer/>
     </PageContainer>
   );
 };
