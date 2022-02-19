@@ -1,17 +1,16 @@
-import React, { useState } from "react";
 import {
   faCalendarAlt,
   faCaretDown,
   faCaretUp,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { useState } from "react";
+import Calendar from "react-calendar";
+import "react-calendar/dist/Calendar.css";
 import styled, { css } from "styled-components";
 import tw from "twin.macro";
 import { Button } from "../button";
 import { Marginer } from "../marginer";
-
-import Calendar from "react-calendar";
-import "react-calendar/dist/Calendar.css";
 import { SCREENS } from "../responsive";
 
 const CardContainer = styled.div`
@@ -23,24 +22,25 @@ const CardContainer = styled.div`
     items-center
     rounded-md
     bg-white
-    pt-1
-    pb-1
-    pr-2
-    pl-2
-    md:pt-2
-    md:pb-2
-    md:pl-9
-    md:pr-9
+    py-1
+    px-2
+    -mt-16
+    md:py-2
+    md:px-9
+    md:mt-8
   `};
 `;
 
 const ItemContainer = styled.div`
-  ${tw`flex relative`};
+  ${tw`
+  flex 
+  relative
+  `};
 `;
 
 const Icon = styled.span`
   ${tw`
-    text-red-500
+      text-red-500
       fill-current
       text-xs
       md:text-base
