@@ -1,5 +1,6 @@
 import styled from "styled-components";
 import tw from "twin.macro";
+import BookCard from "../../bookCard";
 import Navbar from "../../navbar";
 import TopSection from "./topSection";
 
@@ -19,6 +20,7 @@ const HomePage = () => {
     <PageContainer>
       <Navbar />
       <TopSection />
+      <BookCard />
     </PageContainer>
   );
 };
